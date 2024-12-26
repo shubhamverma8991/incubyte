@@ -23,7 +23,14 @@ A simple Library Management System implemented in Node.js, following Test-Driven
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/shubhamverma8991/incubyte
    cd incubyte
    ```
+
+2. To Perform Test
+
+```bash
+npm test
+```
