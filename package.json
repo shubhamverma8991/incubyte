@@ -1,4 +1,21 @@
 {
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "A simple Library Management System implemented in Node.js using TDD principles.",
+  "main": "src/library.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "library",
+    "management",
+    "system",
+    "nodejs",
+    "tdd",
+    "jest"
+  ],
+  "author": "Shubham",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0"
   }
