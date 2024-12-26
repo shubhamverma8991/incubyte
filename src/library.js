@@ -24,6 +24,17 @@ class Library {
     }
     book.isBorrowed = true;
   }
+
+  returnBook(isbn) {
+    const book = this.books.find((b) => b.isbn === isbn);
+    if (!book) {
+      throw new Error("Book not found.");
+    }
+    if (!book.isBorrowed) {
+      throw new Error("Book was not borrowed.");
+    }
+    book.isBorrowed = false;
+  }
 }
 
 module.exports = Library;
