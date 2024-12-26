@@ -13,6 +13,17 @@ class Library {
   getAvailableBooks() {
     return this.books.filter((book) => !book.isBorrowed);
   }
+
+  borrowBook(isbn) {
+    const book = this.books.find((b) => b.isbn === isbn);
+    if (!book) {
+      throw new Error("Book not found.");
+    }
+    if (book.isBorrowed) {
+      throw new Error("Book is already borrowed.");
+    }
+    book.isBorrowed = true;
+  }
 }
 
 module.exports = Library;

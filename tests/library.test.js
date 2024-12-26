@@ -7,6 +7,7 @@ describe("Library Management System", () => {
     library = new Library();
   });
 
+  // Add Book
   test("should add a book to the library", () => {
     const book = { isbn: "12345", title: "JavaScript Basics", author: "John Doe", year: 2021 };
     library.addBook(book);
@@ -20,5 +21,20 @@ describe("Library Management System", () => {
     const book = { isbn: "12345", title: "JavaScript Basics", author: "John Doe", year: 2021 };
     library.addBook(book);
     expect(() => library.addBook(book)).toThrow("Book with the same ISBN already exists.");
+  });
+
+  // Borrow
+  test("should borrow a book if available", () => {
+    const book = { isbn: "12345", title: "JavaScript Basics", author: "John Doe", year: 2021 };
+    library.addBook(book);
+    library.borrowBook("12345");
+    expect(library.getAvailableBooks()).not.toContainEqual(book);
+  });
+
+  test("should throw an error if the book is already borrowed", () => {
+    const book = { isbn: "12345", title: "JavaScript Basics", author: "John Doe", year: 2021 };
+    library.addBook(book);
+    library.borrowBook("12345");
+    expect(() => library.borrowBook("12345")).toThrow("Book is already borrowed.");
   });
 });
