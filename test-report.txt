@@ -2,3 +2,17 @@
 > library-management-system@1.0.0 test
 > jest
 
+PASS tests/library.test.js
+  Library Management System
+    ΓêÜ should add a book to the library (3 ms)
+    ΓêÜ should not add a book with a duplicate ISBN (7 ms)
+    ΓêÜ should borrow a book if available (1 ms)
+    ΓêÜ should throw an error if the book is already borrowed (1 ms)
+    ΓêÜ should return a borrowed book (1 ms)
+    ΓêÜ should throw an error if the book was not borrowed (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.388 s, estimated 1 s
+Ran all test suites.
